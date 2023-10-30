@@ -115,7 +115,7 @@ public class showSystem extends JFrame {
         }
     }
     private void MethodOne() {
-        if (isFileRight() == JFileChooser.APPROVE_OPTION) {
+        if (isFileRight() == JFileChooser.APPROVE_OPTION) {//文件可以被处理
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 String inputContent = new String(Files.readAllBytes(Paths.get(selectedFile.getAbsolutePath())));//Files的获取文件方法
@@ -124,7 +124,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/Main.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);//展示图片
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -132,9 +132,9 @@ public class showSystem extends JFrame {
     }
 
     private void MethodTwo() {
-        // 实现方法二的处理逻辑
+        
 
-        if (isFileRight() == JFileChooser.APPROVE_OPTION) {
+        if (isFileRight() == JFileChooser.APPROVE_OPTION) {//文件可以被处理
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 String inputContent = new String(Files.readAllBytes(Paths.get(selectedFile.getAbsolutePath())));//Files的获取文件方法
@@ -145,7 +145,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/mianxiangduixiang.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);//展示图片
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -155,7 +155,7 @@ public class showSystem extends JFrame {
     private void MethodThree() {
         // 实现方法二的处理逻辑
 
-        if (isFileRight() == JFileChooser.APPROVE_OPTION) {
+        if (isFileRight() == JFileChooser.APPROVE_OPTION) {//文件可以被处理
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 String inputContent = new String(Files.readAllBytes(Paths.get(selectedFile.getAbsolutePath())));//Files的获取文件方法
@@ -165,7 +165,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/pipe.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);//展示图片
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -174,7 +174,7 @@ public class showSystem extends JFrame {
 
     private void MethodFour() {
         // 实现方法四的处理逻辑
-        if (isFileRight()== JFileChooser.APPROVE_OPTION) {//存在文件
+        if (isFileRight()== JFileChooser.APPROVE_OPTION) {//文件可以被处理
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 String inputContent = new String(Files.readAllBytes(Paths.get(selectedFile.getAbsolutePath())));//Files的获取文件方法
@@ -184,7 +184,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/shijianSystem.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);//展示图片
             } catch (IOException e) {
                 e.printStackTrace();
             }
