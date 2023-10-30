@@ -20,7 +20,7 @@ public class showSystem extends JFrame {
     JScrollPane outputScrollPane;//输出框
     JFileChooser fileChooser = new JFileChooser();
     JTextArea outputArea = new JTextArea();
-    JFrame frame = new JFrame();
+    JFrame frame = new JFrame("原理图片");
 
     private JTextArea inputArea;
     JComboBox<String> methodBox = new JComboBox<>(new String[]{"主程序-子程序软件体系结构", "面向对象软件体系结构", "事件系统软件体系结构", "管道-过滤软件体系结构"});
@@ -28,12 +28,12 @@ public class showSystem extends JFrame {
     public static void main(String[] args) {
         showSystem GUI = new showSystem();
         GUI.showFrame();
-        
+
     }
     public void showFrame() {
         this.setVisible(true);
         this.setTitle("经典软件体系结构教学软件");
-        
+        this.setSize(800, 600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setSize(1000, 500);
@@ -115,7 +115,7 @@ public class showSystem extends JFrame {
         }
     }
     private void MethodOne() {
-        if (isFileRight() == JFileChooser.APPROVE_OPTION) {//文件可以被处理
+        if (isFileRight() == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 String inputContent = new String(Files.readAllBytes(Paths.get(selectedFile.getAbsolutePath())));//Files的获取文件方法
@@ -124,7 +124,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/Main.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);//展示图片
+                JOptionPane.showMessageDialog(frame, "", frame.getTitle(), JOptionPane.PLAIN_MESSAGE, imageIcon);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -132,9 +132,9 @@ public class showSystem extends JFrame {
     }
 
     private void MethodTwo() {
-        
+      
 
-        if (isFileRight() == JFileChooser.APPROVE_OPTION) {//文件可以被处理
+        if (isFileRight() == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 String inputContent = new String(Files.readAllBytes(Paths.get(selectedFile.getAbsolutePath())));//Files的获取文件方法
@@ -145,7 +145,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/mianxiangduixiang.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);//展示图片
+                JOptionPane.showMessageDialog(frame, "", frame.getTitle(), JOptionPane.PLAIN_MESSAGE, imageIcon);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -153,9 +153,9 @@ public class showSystem extends JFrame {
     }
 
     private void MethodThree() {
-        // 实现方法二的处理逻辑
+      
 
-        if (isFileRight() == JFileChooser.APPROVE_OPTION) {//文件可以被处理
+        if (isFileRight() == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 String inputContent = new String(Files.readAllBytes(Paths.get(selectedFile.getAbsolutePath())));//Files的获取文件方法
@@ -165,7 +165,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/pipe.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);//展示图片
+                JOptionPane.showMessageDialog(frame, "", frame.getTitle(), JOptionPane.PLAIN_MESSAGE, imageIcon);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -173,8 +173,8 @@ public class showSystem extends JFrame {
     }
 
     private void MethodFour() {
-        // 实现方法四的处理逻辑
-        if (isFileRight()== JFileChooser.APPROVE_OPTION) {//文件可以被处理
+        
+        if (isFileRight()== JFileChooser.APPROVE_OPTION) {//存在文件
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 String inputContent = new String(Files.readAllBytes(Paths.get(selectedFile.getAbsolutePath())));//Files的获取文件方法
@@ -184,7 +184,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/shijianSystem.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);//展示图片
+                JOptionPane.showMessageDialog(frame, "", frame.getTitle(), JOptionPane.PLAIN_MESSAGE, imageIcon);
             } catch (IOException e) {
                 e.printStackTrace();
             }
