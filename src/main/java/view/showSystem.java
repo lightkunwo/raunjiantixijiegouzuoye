@@ -33,7 +33,7 @@ public class showSystem extends JFrame {
     public void showFrame() {
         this.setVisible(true);
         this.setTitle("经典软件体系结构教学软件");
-        this.setSize(800, 600);
+        
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setSize(1000, 500);
