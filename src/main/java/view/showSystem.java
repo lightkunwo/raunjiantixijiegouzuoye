@@ -132,7 +132,7 @@ public class showSystem extends JFrame {
     }
 
     private void MethodTwo() {
-        // 实现方法二的处理逻辑
+      
 
         if (isFileRight() == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
@@ -153,7 +153,7 @@ public class showSystem extends JFrame {
     }
 
     private void MethodThree() {
-        // 实现方法二的处理逻辑
+      
 
         if (isFileRight() == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
@@ -173,7 +173,7 @@ public class showSystem extends JFrame {
     }
 
     private void MethodFour() {
-        // 实现方法四的处理逻辑
+        
         if (isFileRight()== JFileChooser.APPROVE_OPTION) {//存在文件
             File selectedFile = fileChooser.getSelectedFile();
             try {
