@@ -20,7 +20,7 @@ public class showSystem extends JFrame {
     JScrollPane outputScrollPane;//输出框
     JFileChooser fileChooser = new JFileChooser();
     JTextArea outputArea = new JTextArea();
-    JFrame frame = new JFrame();
+    JFrame frame = new JFrame("原理图片");
 
     private JTextArea inputArea;
     JComboBox<String> methodBox = new JComboBox<>(new String[]{"主程序-子程序软件体系结构", "面向对象软件体系结构", "事件系统软件体系结构", "管道-过滤软件体系结构"});
@@ -28,7 +28,7 @@ public class showSystem extends JFrame {
     public static void main(String[] args) {
         showSystem GUI = new showSystem();
         GUI.showFrame();
-        
+
     }
     public void showFrame() {
         this.setVisible(true);
@@ -124,7 +124,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/Main.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(frame, "", frame.getTitle(), JOptionPane.PLAIN_MESSAGE, imageIcon);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -145,7 +145,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/mianxiangduixiang.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(frame, "", frame.getTitle(), JOptionPane.PLAIN_MESSAGE, imageIcon);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -165,7 +165,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/pipe.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(frame, "", frame.getTitle(), JOptionPane.PLAIN_MESSAGE, imageIcon);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -184,7 +184,7 @@ public class showSystem extends JFrame {
                 String outputContent = new String(Files.readAllBytes(Paths.get(outputPath)));
                 outputArea.setText(outputContent);
                 ImageIcon imageIcon = new ImageIcon("src/main/java/view/shijianSystem.png");
-                JOptionPane.showMessageDialog(frame, "", "图片", JOptionPane.PLAIN_MESSAGE, imageIcon);
+                JOptionPane.showMessageDialog(frame, "", frame.getTitle(), JOptionPane.PLAIN_MESSAGE, imageIcon);
             } catch (IOException e) {
                 e.printStackTrace();
             }
